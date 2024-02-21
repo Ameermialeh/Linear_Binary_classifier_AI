@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW2 AI</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/start.css" />
+  </head>
+  <body>
+    <h1
+      style="
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      "
+    >
+      Linear Binary Classifier
+    </h1>
+    <div id="container" style="margin-top: 10rem">
+      <div class="row" style="margin-left: 0; margin-right: 0">
+        <div class="col-" style="margin-left: 100px; margin-right: 14rem">
+          <div class="row">
+            <div class="col-">
+              <label class="textshow" style="font-size: 20px"
+                >Learning Rate:</label
+              >
+            </div>
+            <div class="col-" style="margin-left: 70px; margin-right: 10px">
+              <input
+                type="number"
+                value="0.0001"
+                id="learning-rate"
+                min="0"
+                max="1"
+                step="0.000001"
+                style="width: 105px; text-align: center; height: 30px"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-">
+              <label class="textshow" style="font-size: 20px"
+                >Maximum <br />Iterations:</label
+              >
+            </div>
+
+            <div class="col-" style="margin-left: 15px">
+              <input
+                type="number"
+                value="10000"
+                id="max-iterations"
+                step="100"
+                style="
+                  width: 105px;
+                  text-align: center;
+                  height: 30px;
+                  margin-left: 94px;
+                  margin-top: 15px;
+                "
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-">
+              <label class="textshow" style="font-size: 20px"
+                >Point Color:</label
+              >
+            </div>
+            <div class="col-sm" style="margin-left: 78px">
+              <select id="myDropdown" style="width: 105px; text-align: center">
+                <option selected="selected" value="Blue">Blue</option>
+                <option value="Red">Red</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-">
+          <div class="row">
+            <div class="canvas-container">
+              <canvas
+                id="classification-canvas"
+                style="background-color: #fff"
+              ></canvas>
+            </div>
+          </div>
+
+          <div class="row">
+            <button
+              type="button"
+              onclick="Train()"
+              class="btn btn-success"
+              id="startBtn"
+              style="margin-bottom: 10px"
+            >
+              Train
+            </button>
+          </div>
+          <div class="row TestB">
+            <button
+              type="button"
+              onclick="Test()"
+              class="btn btn-success"
+              id="TestBtn"
+              style="margin-bottom: 10px; background-color: blue"
+            >
+              Test
+            </button>
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-danger" id="clearBtn">
+              Clear
+            </button>
+          </div>
+        </div>
+        <div class="col-" style="margin-left: 5rem">
+          <div class="row">
+            <div class="col-sm">
+              <label class="textshow" style="font-size: 20px"
+                >Performance:</label
+              >
+            </div>
+            <div class="col-sm" style="margin-left: 0px">
+              <div class="per" id="accuracy" style="color: black"></div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 10px">
+            <div class="col-sm">
+              <label class="textshow" style="font-size: 20px"
+                >Clicked Point Class:</label
+              >
+            </div>
+            <div class="col-sm" style="margin-left: 0px">
+              <div id="class-msg" style="color: black"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="PercHW2.js"></script>
+  </body>
+</html>

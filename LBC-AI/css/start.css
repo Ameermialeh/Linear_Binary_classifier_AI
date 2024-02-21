@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 97%;
+  background-color: #ffffff;
+  background-image: url("/img5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.classification-canvas {
+  color: #fff;
+}
+#startBtn,
+#clearBtn ,
+#TestBtn {
+  width: 200px;
+  justify-items: center;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+select {
+  padding: 2px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+.per {
+  color: #fff;
+}
+
